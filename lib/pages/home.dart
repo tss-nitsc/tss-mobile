@@ -76,18 +76,16 @@ class _HomePageState extends State<HomePage> {
                           color: Colors.teal,
                         ),
                       ),
-                      ButtonTheme.bar(
-                        child: ButtonBar(
-                          children: <Widget>[
-                            FlatButton(
-                              child: Text('DELETE'),
-                              onPressed: () {
-                                deleteData();
-                                resetData();
-                              },
-                            ),
-                          ],
-                        ),
+                      ButtonBar(
+                        children: <Widget>[
+                          FlatButton(
+                            child: Text('DELETE'),
+                            onPressed: () {
+                              deleteData();
+                              resetData();
+                            },
+                          ),
+                        ],
                       ),
                     ],
                   ),
