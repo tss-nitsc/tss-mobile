@@ -16,7 +16,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String organizationName = '';
-  String organizationDescription = '';
   String ticketNumber = '';
 
   @override
@@ -28,7 +27,6 @@ class _HomePageState extends State<HomePage> {
   void resetData() {
     setState(() {
       organizationName = '';
-      organizationDescription = '';
       ticketNumber = '';
     });
   }
@@ -56,9 +54,6 @@ class _HomePageState extends State<HomePage> {
                         title: Text(
                           organizationName,
                           style: TextStyle(fontSize: 20.0),
-                        ),
-                        subtitle: Text(
-                          organizationDescription,
                         ),
                         trailing: Row(
                           mainAxisSize: MainAxisSize.min,
@@ -149,12 +144,10 @@ class _HomePageState extends State<HomePage> {
       Map<String, dynamic> map = json.decode(data);
       setState(() {
         organizationName = map['organizationName'];
-        organizationDescription = map['organizationDescription'];
-        ticketNumber = map['ticketNumber'];
+        ticketNumber = map['currentTicketNumber'];
       });
       List<String> list = [
         organizationName,
-        organizationDescription,
         ticketNumber
       ];
       saveData(list);
@@ -192,8 +185,7 @@ class _HomePageState extends State<HomePage> {
     if (data != null) {
       setState(() {
         organizationName = data[0];
-        organizationDescription = data[1];
-        ticketNumber = data[2];
+        ticketNumber = data[1];
       });
     }
   }
@@ -222,7 +214,7 @@ class CurrentTicketNumber extends StatelessWidget {
           default:
             return Text(
               ' ' +
-                  snapshot.data.documents[0]['current_ticket_number']
+                  snapshot.data.documents[0]['currentTicketNumber']
                       .toString() +
                   ' ',
               style: TextStyle(fontSize: 20.0),
