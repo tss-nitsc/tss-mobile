@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                           mainAxisSize: MainAxisSize.min,
                           children: <Widget>[
                             Icon(Icons.check, size: 24.0, color: Colors.grey),
-                            CurrentTicketNumber(organizationName),
+                            ConfirmedTicketNumber(organizationName),
                             Icon(Icons.access_time,
                                 size: 24.0, color: Colors.grey),
                             Text(' 5 min', style: TextStyle(fontSize: 20.0)),
@@ -194,8 +194,8 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class CurrentTicketNumber extends StatelessWidget {
-  CurrentTicketNumber(this.organizationName);
+class ConfirmedTicketNumber extends StatelessWidget {
+  ConfirmedTicketNumber(this.organizationName);
   final String organizationName;
   @override
   Widget build(BuildContext context) {
@@ -212,7 +212,7 @@ class CurrentTicketNumber extends StatelessWidget {
           default:
             return Text(
               ' ' +
-                  snapshot.data.documents[0]['currentTicketNumber']
+                  snapshot.data.documents[0]['confirmedTicketNumber']
                       .toString() +
                   ' ',
               style: TextStyle(fontSize: 20.0),
