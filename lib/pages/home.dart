@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
     if (organizationName != '') {
       return Scaffold(
         appBar: AppBar(
-          title: Text('My Ticket'),
+          title: Text('TSS'),
         ),
         body: Container(
           padding: EdgeInsets.all(10.0),
@@ -60,9 +60,6 @@ class _HomePageState extends State<HomePage> {
                           children: <Widget>[
                             Icon(Icons.check, size: 24.0, color: Colors.grey),
                             ConfirmedTicketNumber(organizationName),
-                            Icon(Icons.access_time,
-                                size: 24.0, color: Colors.grey),
-                            Text(' 5 min', style: TextStyle(fontSize: 20.0)),
                           ],
                         ),
                       ),
@@ -106,7 +103,7 @@ class _HomePageState extends State<HomePage> {
     } else {
       return Scaffold(
         appBar: AppBar(
-          title: Text('My Ticket'),
+          title: Text('TSS'),
         ),
         body: Container(
           padding: EdgeInsets.all(10.0),
