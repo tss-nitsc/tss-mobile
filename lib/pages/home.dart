@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
     if (organizationName != '') {
       return Scaffold(
         appBar: AppBar(
-          title: Text('My Ticket'),
+          title: Text('TSS'),
         ),
         body: Container(
           padding: EdgeInsets.all(10.0),
@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
     } else {
       return Scaffold(
         appBar: AppBar(
-          title: Text('My Ticket'),
+          title: Text('TSS'),
         ),
         body: Container(
           padding: EdgeInsets.all(10.0),
