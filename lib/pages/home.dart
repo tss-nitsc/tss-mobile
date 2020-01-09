@@ -60,9 +60,6 @@ class _HomePageState extends State<HomePage> {
                           children: <Widget>[
                             Icon(Icons.check, size: 24.0, color: Colors.grey),
                             ConfirmedTicketNumber(organizationName),
-                            Icon(Icons.access_time,
-                                size: 24.0, color: Colors.grey),
-                            Text(' 5 min', style: TextStyle(fontSize: 20.0)),
                           ],
                         ),
                       ),
